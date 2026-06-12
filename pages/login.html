@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In — AtherIQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    body { background: var(--section-bg); min-height: 100vh; }
+    .auth-wrapper {
+      min-height: calc(100vh - 65px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 48px 20px;
+    }
+    .auth-container {
+      display: flex;
+      width: 100%; max-width: 920px;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      box-shadow: 0 20px 60px rgba(79,70,229,0.10);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* LEFT PANEL */
+    .auth-side {
+      flex: 1;
+      background: var(--gradient);
+      padding: 56px 40px;
+      color: white;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; overflow: hidden;
+    }
+    .auth-side::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px;
+      background: rgba(255,255,255,0.07); border-radius: 50%;
+    }
+    .auth-side::after {
+      content: '';
+      position: absolute; bottom: -40px; left: -40px;
+      width: 180px; height: 180px;
+      background: rgba(255,255,255,0.05); border-radius: 50%;
+    }
+    .side-logo { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.5rem; }
+    .side-logo span { opacity: 0.7; }
+    .side-headline { font-family: 'Poppins', sans-serif; font-size: 1.7rem; font-weight: 800; line-height: 1.2; margin-bottom: 14px; }
+    .side-sub { opacity: 0.8; font-size: 0.92rem; line-height: 1.6; margin-bottom: 32px; }
+    .side-features { list-style: none; }
+    .side-features li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.88rem; margin-bottom: 12px; opacity: 0.9;
+    }
+    .side-features li::before { content: '✓'; font-weight: 700; opacity: 0.7; }
+    .side-quote {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px; padding: 18px 20px;
+      border: 1px solid rgba(255,255,255,0.15);
+      margin-top: 32px;
+    }
+    .side-quote p { color: rgba(255,255,255,0.9); font-size: 0.85rem; line-height: 1.6; margin-bottom: 10px; }
+    .side-quote-author { font-size: 0.78rem; opacity: 0.7; }
+
+    /* RIGHT PANEL */
+    .auth-form-panel {
+      flex: 1; padding: 56px 44px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .auth-header { margin-bottom: 32px; }
+    .auth-header h2 { font-size: 1.8rem; margin-bottom: 6px; }
+    .auth-header p { font-size: 0.9rem; }
+    .auth-header p a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .auth-header p a:hover { text-decoration: underline; }
+
+    .pw-wrapper { position: relative; }
+    .pw-toggle {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; font-size: 1rem;
+      color: var(--muted);
+    }
+    .forgot-link {
+      font-size: 0.82rem; color: var(--accent);
+      text-decoration: none; float: right; margin-top: -24px;
+      display: block; margin-bottom: 20px;
+    }
+    .forgot-link:hover { text-decoration: underline; }
+
+    .social-btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 11px 20px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--white); color: var(--ink);
+      font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s;
+      text-decoration: none; margin-bottom: 10px;
+    }
+    .social-btn:hover { background: var(--section-bg); border-color: var(--muted-light); }
+    .social-icon { font-size: 1rem; }
+
+    @media (max-width: 700px) {
+      .auth-side { display: none; }
+      .auth-form-panel { padding: 40px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="logo">Ather<span>IQ</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="register.html" class="btn btn-sm">Create Account</a>
+    </div>
+  </nav>
+
+  <div class="auth-wrapper">
+    <div class="auth-container">
+
+      <!-- LEFT -->
+      <div class="auth-side">
+        <div>
+          <div class="side-logo">Ather<span>IQ</span></div>
+        </div>
+        <div>
+          <div class="side-headline">Welcome back to your learning journey</div>
+          <p class="side-sub">Pick up right where you left off. Your progress, courses, and certificates are waiting.</p>
+          <ul class="side-features">
+            <li>Track your daily learning streak</li>
+            <li>Resume courses from where you stopped</li>
+            <li>Access your earned certificates</li>
+            <li>Get personalized learning recommendations</li>
+          </ul>
+          <div class="side-quote">
+            <p>"I log in every single day. The streak feature alone keeps me coming back."</p>
+            <div class="side-quote-author">— Ankit S., AtherIQ learner</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="auth-form-panel">
+        <div class="auth-header">
+          <h2>Log in to AtherIQ</h2>
+          <p>Don't have an account? <a href="register.html">Sign up free →</a></p>
+        </div>
+
+        <div id="login-alert" style="display:none"></div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required/>
+          <span class="form-error" data-err="email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="pw-wrapper">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required/>
+            <button class="pw-toggle" type="button" data-toggle-pw="#password">👁</button>
+          </div>
+        </div>
+
+        <a href="#" class="forgot-link">Forgot password?</a>
+
+        <div class="form-group" style="display:flex;align-items:center;gap:8px;margin-bottom:24px;">
+          <input type="checkbox" id="remember" style="width:16px;height:16px;accent-color:var(--accent);"/>
+          <label for="remember" style="font-size:0.86rem;font-weight:400;color:var(--muted);margin-bottom:0;">Keep me logged in</label>
+        </div>
+
+        <button class="btn btn-full btn-lg" onclick="handleLogin()">Log In</button>
+
+        <div class="divider">or continue with</div>
+
+        <a href="#" class="social-btn">
+          <span class="social-icon">🔵</span> Continue with Google
+        </a>
+        <a href="#" class="social-btn">
+          <span class="social-icon">🐙</span> Continue with GitHub
+        </a>
+
+        <p style="text-align:center;font-size:0.78rem;color:var(--muted-light);margin-top:24px;">
+          By logging in, you agree to our
+          <a href="terms.html" style="color:var(--accent);text-decoration:none;">Terms</a> and
+          <a href="privacy.html" style="color:var(--accent);text-decoration:none;">Privacy Policy</a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function handleLogin() {
+      const email = document.querySelector('#email');
+      const pw = document.querySelector('#password');
+      const alertEl = document.querySelector('#login-alert');
+      let valid = true;
+
+      document.querySelectorAll('.form-error').forEach(e => e.textContent = '');
+      [email, pw].forEach(f => f.style.borderColor = '');
+
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        document.querySelector('[data-err="email"]').textContent = 'Enter a valid email.';
+        email.style.borderColor = 'var(--error)';
+        valid = false;
+      }
+      if (!pw.value.trim()) {
+        pw.style.borderColor = 'var(--error)';
+        valid = false;
+      }
+      if (!valid) return;
+
+      // Simulate loading
+      const btn = document.querySelector('button[onclick="handleLogin()"]');
+      btn.textContent = 'Logging in...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        alertEl.className = 'alert alert-info';
+        alertEl.textContent = '⚠️ This is a static demo. Backend login coming soon!';
+        alertEl.style.display = 'flex';
+        btn.textContent = 'Log In';
+        btn.disabled = false;
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — AtherIQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .about-hero {
+      padding: 80px 6vw 72px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .about-hero-text { max-width: 580px; }
+    .about-hero-text h1 em { font-style: normal; color: var(--accent); }
+    .about-hero-text p { font-size: 1.05rem; margin-top: 18px; max-width: 480px; line-height: 1.75; }
+    .about-hero-visual {
+      flex: 1; min-width: 260px; max-width: 380px;
+      background: var(--gradient);
+      border-radius: var(--radius-xl); padding: 40px 36px;
+      color: white; box-shadow: var(--shadow-lg);
+      position: relative; overflow: hidden;
+    }
+    .about-hero-visual::before {
+      content: ''; position: absolute; top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.07); border-radius: 50%;
+    }
+    .mission-stat { margin-bottom: 22px; }
+    .mission-stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem; font-weight: 800; line-height: 1;
+    }
+    .mission-stat-label { font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
+
+    .values-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+    .value-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px;
+      text-align: center;
+    }
+    .value-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .value-card h3 { margin-bottom: 8px; font-size: 1rem; }
+    .value-card p { font-size: 0.87rem; }
+
+    .team-section { padding: 80px 6vw; background: var(--section-bg); }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+    .team-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px; text-align: center;
+    }
+    .team-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--gradient); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem;
+      margin: 0 auto 16px; box-shadow: var(--shadow-md);
+    }
+    .team-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .team-role { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .team-bio { font-size: 0.84rem; color: var(--muted); line-height: 1.6; }
+    .team-links { margin-top: 14px; display: flex; justify-content: center; gap: 10px; }
+    .team-links a {
+      font-size: 0.78rem; color: var(--accent);
+      text-decoration: none; font-weight: 600;
+    }
+    .team-links a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .about-hero { padding: 60px 5vw 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="logo">Ather<span>IQ</span></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+      <a href="register.html" class="btn btn-sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-text">
+      <span class="eyebrow">Our Story</span>
+      <h1>Built for learners,<br/><em>by learners.</em></h1>
+      <p>AtherIQ was born out of a simple frustration: most online learning platforms make it too easy to lose focus, skip ahead, or forget what you learned. We built something different — a platform that helps you actually stick with it.</p>
+    </div>
+    <div class="about-hero-visual">
+      <div class="mission-stat">
+        <div class="mission-stat-num">2026</div>
+        <div class="mission-stat-label">Founded in India</div>
+      </div>
+      <div class="mission-stat">
+        <div class="mission-stat-num">50+</div>
+        <div class="mission-stat-label">Courses in development</div>
+      </div>
+      <div class="mission-stat">
+        <div class="mission-stat-num">10K+</div>
+        <div class="mission-stat-label">Early signups</div>
+      </div>
+      <div style="font-size:0.82rem;opacity:0.75;margin-top:8px;">🇮🇳 Made with ♥ in India</div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section section-alt">
+    <div class="section-header">
+      <h2>Our Mission</h2>
+      <p class="section-sub">We believe that anyone, anywhere, can develop world-class skills — if given the right structure, tools, and accountability.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🎯</span>
+        <h3>Structure First</h3>
+        <p>Learning without structure is browsing. Every course on AtherIQ follows a proven path from beginner to confident practitioner.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">📈</span>
+        <h3>Progress Matters</h3>
+        <p>You can't manage what you can't measure. Our dashboards make progress visible and motivating every single day.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🇮🇳</span>
+        <h3>Built for India</h3>
+        <p>Designed for Indian students and professionals — with relevant examples, affordable pricing, and real-world application.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🔓</span>
+        <h3>Access for All</h3>
+        <p>Quality education shouldn't require an expensive degree. Our free plan gives everyone a genuine starting point.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2>The team</h2>
+      <p class="section-sub">A small, passionate team building something meaningful for learners across India.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">RV</div>
+        <div class="team-name">Raj Vimal</div>
+        <div class="team-role">Founder & Developer</div>
+        <p class="team-bio">Full-stack .NET developer building AtherIQ from the ground up. Passionate about education technology and making learning accessible.</p>
+        <div class="team-links">
+          <a href="https://www.linkedin.com/in/raj-vimal-87350524b/" target="_blank">LinkedIn →</a>
+          <a href="mailto:rajvimal648@gmail.com">Email →</a>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:28px;font-size:0.88rem;color:var(--muted);">
+      We're a growing team. <a href="mailto:rajvimal648@gmail.com" style="color:var(--accent);font-weight:600;">Interested in joining?</a>
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:80px 6vw;text-align:center;">
+    <span class="eyebrow">Join Us</span>
+    <h2 style="margin-bottom:12px;">Start your learning journey</h2>
+    <p style="max-width:440px;margin:0 auto 32px;">AtherIQ is free to start. Create an account today and begin building skills that matter.</p>
+    <a href="register.html" class="btn btn-lg">Create Free Account</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo">Ather<span>IQ</span></a>
+        <p>Smart learning software for students and professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <a href="../index.html#features">Features</a>
+        <a href="register.html">Sign Up</a>
+        <a href="login.html">Log In</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 AtherIQ Technologies. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
