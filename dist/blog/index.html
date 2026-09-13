@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Technical Articles on Development, Cloud &amp; Integration</title>
+<meta name="description" content="Practical articles on ERP and CRM integration, Core Web Vitals, choosing between Azure and AWS, and when custom software is the wrong answer.">
+<link rel="canonical" href="https://www.atheriq.com/blog">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AtherIQ">
+<meta property="og:title" content="Blog | Technical Articles on Development, Cloud &amp; Integration">
+<meta property="og:description" content="Practical articles on ERP and CRM integration, Core Web Vitals, choosing between Azure and AWS, and when custom software is the wrong answer.">
+<meta property="og:url" content="https://www.atheriq.com/blog">
+<meta property="og:image" content="https://www.atheriq.com/assets/img/atheriq-og.svg">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Technical Articles on Development, Cloud &amp; Integration">
+<meta name="twitter:description" content="Practical articles on ERP and CRM integration, Core Web Vitals, choosing between Azure and AWS, and when custom software is the wrong answer.">
+<meta name="twitter:image" content="https://www.atheriq.com/assets/img/atheriq-og.svg">
+
+<meta name="theme-color" content="#0B1220">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"></noscript>
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.atheriq.com/#organization","name":"AtherIQ","legalName":"AtherIQ","url":"https://www.atheriq.com","description":"AtherIQ is a technology and software services company that helps businesses build, integrate and scale their digital systems.","foundingDate":"2026","logo":{"@type":"ImageObject","@id":"https://www.atheriq.com/#logo","url":"https://www.atheriq.com/assets/img/atheriq-logo.svg","width":512,"height":512},"image":{"@id":"https://www.atheriq.com/#logo"},"contactPoint":[{"@type":"ContactPoint","telephone":"+91-6394848080","email":"Raj.vimal@AtherIQ.com","contactType":"sales","areaServed":"IN","availableLanguage":["en","hi"]}],"sameAs":[]},{"@type":"WebSite","@id":"https://www.atheriq.com/#website","url":"https://www.atheriq.com","name":"AtherIQ","description":"AtherIQ is a technology and software services company that helps businesses build, integrate and scale their digital systems.","publisher":{"@id":"https://www.atheriq.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://www.atheriq.com/blog#webpage","url":"https://www.atheriq.com/blog","name":"Blog | Technical Articles on Development, Cloud & Integration","description":"Practical articles on ERP and CRM integration, Core Web Vitals, choosing between Azure and AWS, and when custom software is the wrong answer.","isPartOf":{"@id":"https://www.atheriq.com/#website"},"about":{"@id":"https://www.atheriq.com/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","@id":"https://www.atheriq.com/blog#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.atheriq.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.atheriq.com/blog"}]},{"@type":"Blog","@id":"https://www.atheriq.com/blog#blog","name":"AtherIQ Blog","url":"https://www.atheriq.com/blog","publisher":{"@id":"https://www.atheriq.com/#organization"},"blogPost":[{"@type":"BlogPosting","headline":"The ERP Integration Checklist Worth Completing Before You Start","url":"https://www.atheriq.com/blog/erp-integration-checklist-before-you-start","datePublished":"2026-08-28"},{"@type":"BlogPosting","headline":"Core Web Vitals: The Fixes That Actually Move the Number","url":"https://www.atheriq.com/blog/core-web-vitals-fixes-that-move-the-number","datePublished":"2026-08-14"},{"@type":"BlogPosting","headline":"Azure or AWS: How to Choose Without a Sales Deck","url":"https://www.atheriq.com/blog/azure-or-aws-choosing","datePublished":"2026-07-30"},{"@type":"BlogPosting","headline":"When Custom Software Is the Wrong Answer","url":"https://www.atheriq.com/blog/when-custom-software-is-wrong-answer","datePublished":"2026-07-16"},{"@type":"BlogPosting","headline":"CRM Integration: What Actually Breaks in Production","url":"https://www.atheriq.com/blog/crm-integration-what-actually-breaks","datePublished":"2026-06-25"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="container topbar__inner">
+    <p class="topbar__msg">AtherIQ is a technology and software services company that helps businesses build, integrate and scale their digital systems.</p>
+    <ul class="topbar__contact">
+      <li><a href="tel:+916394848080"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 17v2.8a1.9 1.9 0 0 1-2.1 1.9 18.7 18.7 0 0 1-8.2-2.9 18.4 18.4 0 0 1-5.7-5.7A18.7 18.7 0 0 1 2.6 4.8 1.9 1.9 0 0 1 4.5 2.7h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.92.35 1.81.68 2.67a1.9 1.9 0 0 1-.43 2L8.3 10.1a15 15 0 0 0 5.6 5.6l1.14-1.14a1.9 1.9 0 0 1 2-.43c.86.33 1.75.56 2.67.68a1.9 1.9 0 0 1 1.6 1.94Z"/></svg>6394848080</a></li>
+      <li><a href="mailto:Raj.vimal@AtherIQ.com"><svg class="icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg>Raj.vimal@AtherIQ.com</a></li>
+    </ul>
+  </div>
+</div>
+
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    
+<a class="logo" href="/" aria-label="AtherIQ home">
+  <span class="logo__mark" aria-hidden="true">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
+      <rect width="32" height="32" rx="8" fill="currentColor"/>
+      <path d="M9 22.5 15.1 9.5h1.9L23 22.5h-3.1l-1.32-3H13.4l-1.3 3H9Zm5.42-5.4h3.2L16 13.35 14.42 17.1Z" fill="#fff"/>
+    </svg>
+  </span>
+  <span class="logo__text">
+    <span class="logo__name">Ather<span class="logo__accent">IQ</span></span>
+    <span class="logo__tagline">Technology. Innovation. Growth.</span>
+  </span>
+</a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list"><li class="nav__item"><a class="nav__link" href="/">Home</a></li><li class="nav__item"><a class="nav__link" href="/about">About</a></li><li class="nav__item nav__item--has-mega">
+   <button type="button" class="nav__link nav__link--toggle"
+      aria-expanded="false" aria-controls="mega-services" data-mega-toggle>
+    Services<svg class="icon nav__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg>
+        </button>
+      </li><li class="nav__item"><a class="nav__link" href="/portfolio">Portfolio</a></li><li class="nav__item"><a class="nav__link" href="/technologies">Technologies</a></li><li class="nav__item"><a class="nav__link" href="/industries">Industries</a></li><li class="nav__item"><a class="nav__link is-active" href="/blog" aria-current="page">Blog</a></li><li class="nav__item"><a class="nav__link" href="/contact">Contact</a></li></ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--ghost btn--sm" href="/request-a-quote">Request a Quote</a>
+      <a class="btn btn--primary btn--sm" href="/contact">Get a Free Consultation</a>
+    </div>
+
+    <button type="button" class="hamburger" aria-expanded="false" aria-controls="mobile-nav"
+     aria-label="Open menu" data-nav-toggle>
+      <span class="hamburger__bars" aria-hidden="true"></span>
+    </button>
+  </div>
+  
+<div class="mega" id="mega-services" hidden>
+  <div class="container mega__inner">
+    <div class="mega__cols">
+   <div class="mega__col">
+        <p class="mega__heading">Development</p>
+        <ul class="mega__list">
+          <li><a href="/services/web-development">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 9h19M6 6.5h.01M8.75 6.5h.01M11.5 6.5h.01"/></svg></span>
+       <span><span class="mega__label">Web Development</span></span></a></li><li><a href="/services/mobile-app-development">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+       <span><span class="mega__label">Mobile App Development</span></span></a></li><li><a href="/services/custom-software-development">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8.5 8-4.5 4 4.5 4M15.5 8l4.5 4-4.5 4M13.5 4.5l-3 15"/></svg></span>
+       <span><span class="mega__label">Custom Software Development</span></span></a></li><li><a href="/services/ecommerce-development">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 3.5h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.3a1.6 1.6 0 0 0 1.6-1.25l1.5-6.75H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/></svg></span>
+       <span><span class="mega__label">E-Commerce Development</span></span></a></li>
+   </ul>
+      </div><div class="mega__col">
+        <p class="mega__heading">Cloud</p>
+        <ul class="mega__list">
+          <li><a href="/services/cloud">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 19.5a4.5 4.5 0 0 0 .6-8.96 6.5 6.5 0 0 0-12.62 1.7A3.9 3.9 0 0 0 6.4 19.5Z"/></svg></span>
+       <span><span class="mega__label">Cloud Services</span></span></a></li><li><a href="/services/azure">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.3 3.5h6.1L21.5 20.5H14l-6.4-1.1 5-6h-4L9.3 3.5Z"/><path d="M8 6.6 2.5 18.9h4.4"/></svg></span>
+       <span><span class="mega__label">Microsoft Azure Services</span></span></a></li><li><a href="/services/aws">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10.5c0-1.1.9-2 2-2s2 .7 2 1.8v3.9M8 12.4c-2.9.2-4.3.9-4.3 2.2 0 .9.7 1.5 1.8 1.5 1.2 0 2.5-.8 2.5-2.2M11.5 8.7l1.7 7 1.7-5.4 1.7 5.4 1.7-7"/><path d="M2.5 19.4c5.9 3 12.5 2.9 18.4-.3M19.4 17.6c.9-.3 2.1-.4 2.1.1 0 .6-.7 1.6-1.2 2.1"/></svg></span>
+       <span><span class="mega__label">AWS Services</span></span></a></li>
+   </ul>
+      </div><div class="mega__col">
+        <p class="mega__heading">Integration</p>
+        <ul class="mega__list">
+          <li><a href="/services/crm-integration">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.5 20v-1.8a3.6 3.6 0 0 0-3.6-3.6H6.1A3.6 3.6 0 0 0 2.5 18.2V20"/><circle cx="9" cy="7.5" r="3.6"/><path d="M21.5 20v-1.8a3.6 3.6 0 0 0-2.7-3.48M16 4.1a3.6 3.6 0 0 1 0 6.9"/></svg></span>
+       <span><span class="mega__label">CRM Solutions & Integration</span></span></a></li><li><a href="/services/erp-integration">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2.5 9.5 5-9.5 5-9.5-5 9.5-5Z"/><path d="m2.5 16.5 9.5 5 9.5-5M2.5 12l9.5 5 9.5-5"/></svg></span>
+       <span><span class="mega__label">ERP Integration</span></span></a></li><li><a href="/services/api-integration">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 2.5v6M14.5 2.5v6M6.5 8.5h11v3.4a5.5 5.5 0 0 1-11 0V8.5ZM12 17.4v4.1"/></svg></span>
+       <span><span class="mega__label">API Development & Integration</span></span></a></li>
+   </ul>
+      </div><div class="mega__col">
+        <p class="mega__heading">Digital Growth</p>
+        <ul class="mega__list">
+          <li><a href="/services/seo">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m21.5 21.5-5.5-5.5"/></svg></span>
+       <span><span class="mega__label">SEO Services</span></span></a></li>
+   </ul>
+      </div><div class="mega__col">
+        <p class="mega__heading">Intelligent Solutions</p>
+        <ul class="mega__list">
+          <li><a href="/services/ai-automation">
+            <span class="mega__icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5 13.9 9l6.6 2-6.6 2-1.9 6.5L10.1 13l-6.6-2 6.6-2L12 2.5Z"/><path d="M19 3v3M20.5 4.5h-3"/></svg></span>
+       <span><span class="mega__label">AI & Automation</span></span></a></li>
+   </ul>
+      </div>
+    </div>
+    <div class="mega__promo">
+   <p class="eyebrow">Not sure where to start?</p>
+      <p class="mega__promo-title">Tell us what you are trying to build or fix.</p>
+      <p class="mega__promo-text">A short conversation is usually enough to establish the right approach and a realistic cost.</p>
+      <a class="btn btn--primary btn--wide" href="/contact">Get a Free Consultation</a>
+      <a class="mega__promo-link" href="/services">View all services <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" hidden>
+  <div class="mobile-nav__scroll">
+    <ul class="mobile-nav__list"><li class="nav__item"><a class="nav__link" href="/">Home</a></li><li class="nav__item"><a class="nav__link" href="/about">About</a></li><li class="nav__item"><a class="nav__link" href="/services">Services</a></li><li class="nav__item"><a class="nav__link" href="/portfolio">Portfolio</a></li><li class="nav__item"><a class="nav__link" href="/technologies">Technologies</a></li><li class="nav__item"><a class="nav__link" href="/industries">Industries</a></li><li class="nav__item"><a class="nav__link is-active" href="/blog" aria-current="page">Blog</a></li><li class="nav__item"><a class="nav__link" href="/contact">Contact</a></li></ul>
+
+    <details class="mobile-nav__group">
+      <summary>All services<svg class="icon mobile-nav__chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></summary>
+      <div class="mobile-nav__services">
+        <p class="mobile-nav__heading">Development</p>
+        <ul><li><a href="/services/web-development">Web Development</a></li><li><a href="/services/mobile-app-development">Mobile App Development</a></li><li><a href="/services/custom-software-development">Custom Software Development</a></li><li><a href="/services/ecommerce-development">E-Commerce Development</a></li></ul><p class="mobile-nav__heading">Cloud</p>
+        <ul><li><a href="/services/cloud">Cloud Services</a></li><li><a href="/services/azure">Microsoft Azure Services</a></li><li><a href="/services/aws">AWS Services</a></li></ul><p class="mobile-nav__heading">Integration</p>
+        <ul><li><a href="/services/crm-integration">CRM Solutions & Integration</a></li><li><a href="/services/erp-integration">ERP Integration</a></li><li><a href="/services/api-integration">API Development & Integration</a></li></ul><p class="mobile-nav__heading">Digital Growth</p>
+        <ul><li><a href="/services/seo">SEO Services</a></li></ul><p class="mobile-nav__heading">Intelligent Solutions</p>
+        <ul><li><a href="/services/ai-automation">AI & Automation</a></li></ul>
+      </div>
+    </details>
+
+    <div class="mobile-nav__actions">
+      <a class="btn btn--primary btn--wide" href="/contact">Get a Free Consultation</a>
+      <a class="btn btn--ghost btn--wide" href="/request-a-quote">Request a Quote</a>
+    </div>
+
+    <ul class="mobile-nav__contact">
+      <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 17v2.8a1.9 1.9 0 0 1-2.1 1.9 18.7 18.7 0 0 1-8.2-2.9 18.4 18.4 0 0 1-5.7-5.7A18.7 18.7 0 0 1 2.6 4.8 1.9 1.9 0 0 1 4.5 2.7h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.92.35 1.81.68 2.67a1.9 1.9 0 0 1-.43 2L8.3 10.1a15 15 0 0 0 5.6 5.6l1.14-1.14a1.9 1.9 0 0 1 2-.43c.86.33 1.75.56 2.67.68a1.9 1.9 0 0 1 1.6 1.94Z"/></svg><a href="tel:+916394848080">6394848080</a></li>
+      <li><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg><a href="mailto:Raj.vimal@AtherIQ.com">Raj.vimal@AtherIQ.com</a></li>
+    </ul>
+  </div>
+</div>
+<main id="main">
+
+<nav class="breadcrumb" aria-label="Breadcrumb"><div class="container"><ol>
+  <li><a href="/">Home</a></li><li><span aria-current="page">Blog</span></li>
+  </ol></div></nav>
+
+<section class="page-hero page-hero--plain">
+  <div class="container page-hero__inner">
+    <div class="page-hero__copy">
+  <p class="eyebrow">Insights</p>
+      <h1 class="page-hero__title">Technical Writing, Not Content Marketing</h1>
+    <p class="lead">Articles on the problems that come up repeatedly in client work — written for the person who has to make the decision, not for a keyword.</p>
+      
+ 
+ </div>
+    
+  </div>
+</section>
+
+<section class="section section--sm">
+  <div class="container">
+    <div class="filters">
+      <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All articles</button>
+      <button class="filter" type="button" data-filter="cloud" aria-pressed="false">Cloud</button><button class="filter" type="button" data-filter="seo" aria-pressed="false">SEO</button><button class="filter" type="button" data-filter="crm" aria-pressed="false">CRM</button><button class="filter" type="button" data-filter="erp" aria-pressed="false">ERP</button><button class="filter" type="button" data-filter="engineering" aria-pressed="false">Software Engineering</button>
+      <div class="search-field">
+        <label class="visually-hidden" for="post-search">Search articles</label>
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m21.5 21.5-5.5-5.5"/></svg>
+        <input type="search" id="post-search" data-post-search placeholder="Search articles"
+               autocomplete="off">
+      </div>
+    </div>
+
+    <div class="grid grid--3" data-post-list>
+      <div class="reveal" data-category="erp">
+<article class="card card--post card--post-featured">
+  <div class="card--post__meta">
+  <span class="tag tag--brand">ERP</span>
+    <time datetime="2026-08-28">28 August 2026</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span>8 min read</span>
+  </div>
+  <h3 class="card__title"><a class="stretched" href="/blog/erp-integration-checklist-before-you-start">The ERP Integration Checklist Worth Completing Before You Start</a></h3>
+  <p class="card__text">Most ERP integration overruns are decided before any code is written. Six questions that separate an integration that holds up from one that quietly corrupts your stock figures.</p>
+  <span class="card__more">Read article <svg class="icon card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+</article></div><div class="reveal" data-category="seo">
+<article class="card card--post">
+  <div class="card--post__meta">
+  <span class="tag tag--brand">SEO</span>
+    <time datetime="2026-08-14">14 August 2026</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span>7 min read</span>
+  </div>
+  <h3 class="card__title"><a class="stretched" href="/blog/core-web-vitals-fixes-that-move-the-number">Core Web Vitals: The Fixes That Actually Move the Number</a></h3>
+  <p class="card__text">Most Core Web Vitals advice is a list of everything that could theoretically matter. In practice, a handful of causes account for the majority of failing pages.</p>
+  <span class="card__more">Read article <svg class="icon card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+</article></div><div class="reveal" data-category="cloud">
+<article class="card card--post">
+  <div class="card--post__meta">
+  <span class="tag tag--brand">Cloud</span>
+    <time datetime="2026-07-30">30 July 2026</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span>6 min read</span>
+  </div>
+  <h3 class="card__title"><a class="stretched" href="/blog/azure-or-aws-choosing">Azure or AWS: How to Choose Without a Sales Deck</a></h3>
+  <p class="card__text">Both platforms will run your application well. The decision is usually settled by what you already own, who will operate it, and where your data has to live.</p>
+  <span class="card__more">Read article <svg class="icon card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+</article></div><div class="reveal" data-category="engineering">
+<article class="card card--post">
+  <div class="card--post__meta">
+  <span class="tag tag--brand">Software Engineering</span>
+    <time datetime="2026-07-16">16 July 2026</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span>6 min read</span>
+  </div>
+  <h3 class="card__title"><a class="stretched" href="/blog/when-custom-software-is-wrong-answer">When Custom Software Is the Wrong Answer</a></h3>
+  <p class="card__text">We build custom software. We also turn down projects where an off-the-shelf product would serve the client better. Here is how that line gets drawn.</p>
+  <span class="card__more">Read article <svg class="icon card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+</article></div><div class="reveal" data-category="crm">
+<article class="card card--post">
+  <div class="card--post__meta">
+  <span class="tag tag--brand">CRM</span>
+    <time datetime="2026-06-25">25 June 2026</time>
+    <span class="dot" aria-hidden="true"></span>
+    <span>5 min read</span>
+  </div>
+  <h3 class="card__title"><a class="stretched" href="/blog/crm-integration-what-actually-breaks">CRM Integration: What Actually Breaks in Production</a></h3>
+  <p class="card__text">The integration passed testing and went live. Five failure modes that show up weeks later, and how to design them out beforehand.</p>
+  <span class="card__more">Read article <svg class="icon card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+</article></div>
+    </div>
+
+    <p class="no-results" data-no-results hidden>No articles match that search. Try a different
+      term, or <button class="btn btn--link" type="button" data-filter="all">show all
+      articles</button>.</p>
+  </div>
+</section>
+
+
+<section class="cta-band cta-band--dark">
+  <div class="container cta-band__inner">
+    <div class="cta-band__copy">
+      <p class="eyebrow">Beyond the blog</p>
+      <h2 class="cta-band__title">Have a Question These Articles Do Not Answer?</h2>
+      <p class="cta-band__text">Most of what we write about started as a client question. Ask yours directly.</p>
+    </div>
+    <div class="cta-band__actions">
+      <div class="btn-row"><a class="btn btn--primary" href="/contact">Get a Free Consultation</a><a class="btn btn--light" href="/services">Explore Our Services</a></div>
+      <p class="cta-band__note">We respond to project enquiries within one business day.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="logo logo--footer" href="/" aria-label="AtherIQ home">
+   <span class="logo__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+     <path d="M9 22.5 15.1 9.5h1.9L23 22.5h-3.1l-1.32-3H13.4l-1.3 3H9Zm5.42-5.4h3.2L16 13.35 14.42 17.1Z" fill="#0B1220"/>
+      </svg>
+     </span>
+          <span class="logo__text"><span class="logo__name">Ather<span class="logo__accent">IQ</span></span></span>
+        </a>
+        <p class="site-footer__desc">AtherIQ designs, develops and integrates web, mobile, cloud and enterprise applications. We work with businesses that need a technology partner who understands both the engineering and the operational side of the systems they depend on.</p>
+        <ul class="site-footer__contact">
+      <li><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.5 17v2.8a1.9 1.9 0 0 1-2.1 1.9 18.7 18.7 0 0 1-8.2-2.9 18.4 18.4 0 0 1-5.7-5.7A18.7 18.7 0 0 1 2.6 4.8 1.9 1.9 0 0 1 4.5 2.7h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.92.35 1.81.68 2.67a1.9 1.9 0 0 1-.43 2L8.3 10.1a15 15 0 0 0 5.6 5.6l1.14-1.14a1.9 1.9 0 0 1 2-.43c.86.33 1.75.56 2.67.68a1.9 1.9 0 0 1 1.6 1.94Z"/></svg><a href="tel:+916394848080">6394848080</a></li>
+   <li><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg><a href="mailto:Raj.vimal@AtherIQ.com">Raj.vimal@AtherIQ.com</a></li>
+       <li><svg class="icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.8V12l3.4 2"/></svg><span>Monday to Saturday, 9:30 AM - 7:00 PM IST</span></li>
+        </ul>
+        
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__col">
+          <h2 class="site-footer__heading">Company</h2>
+          <ul><li><a href="/about">About Us</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/technologies">Technologies</a></li><li><a href="/process">Our Process</a></li><li><a href="/careers">Careers</a></li></ul>
+        </div><div class="site-footer__col">
+          <h2 class="site-footer__heading">Services</h2>
+          <ul><li><a href="/services/web-development">Web Development</a></li><li><a href="/services/mobile-app-development">Mobile App Development</a></li><li><a href="/services/custom-software-development">Custom Software</a></li><li><a href="/services/ecommerce-development">E-Commerce Development</a></li><li><a href="/services/cloud">Cloud Services</a></li><li><a href="/services/azure">Microsoft Azure</a></li><li><a href="/services/aws">AWS</a></li><li><a href="/services/seo">SEO Services</a></li></ul>
+        </div><div class="site-footer__col">
+          <h2 class="site-footer__heading">Integration</h2>
+          <ul><li><a href="/services/crm-integration">CRM Solutions</a></li><li><a href="/services/erp-integration">ERP Integration</a></li><li><a href="/services/api-integration">API Development</a></li><li><a href="/services/ai-automation">AI & Automation</a></li><li><a href="/industries">Industries</a></li></ul>
+        </div><div class="site-footer__col">
+          <h2 class="site-footer__heading">Resources</h2>
+          <ul><li><a href="/blog">Blog</a></li><li><a href="/contact#faqs">FAQs</a></li><li><a href="/request-a-quote">Request a Quote</a></li><li><a href="/contact">Contact Us</a></li></ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__cta">
+      <p><strong>Have a project in mind?</strong> Tell us what you need to build, improve or integrate.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary btn--sm" href="/contact">Get a Free Consultation</a>
+        <a class="btn btn--light btn--sm" href="/request-a-quote">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; 2026 AtherIQ. All Rights Reserved.</p>
+      <ul class="site-footer__legal">
+        <li><a href="/privacy-policy">Privacy Policy</a></li><li><a href="/terms-and-conditions">Terms & Conditions</a></li><li><a href="/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

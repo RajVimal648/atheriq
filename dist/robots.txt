@@ -1,0 +1,5 @@
+# robots.txt - AtherIQ
+User-agent: *
+Allow: /
+
+Sitemap: https://www.atheriq.com/sitemap.xml

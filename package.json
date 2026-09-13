@@ -1,0 +1,12 @@
+{
+  "name": "atheriq-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AtherIQ corporate website - static frontend, zero dependencies",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node --run build && node serve.mjs",
+    "dev": "node serve.mjs --watch"
+  }
+}
