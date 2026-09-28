@@ -1,7 +1,4 @@
-/**
- * Company profile, contact details, navigation and footer structure.
- * Single source of truth - edit here, every page updates on the next build.
- */
+
 
 export const site = {
   name: "AtherIQ",
@@ -20,12 +17,12 @@ export const site = {
     "AtherIQ designs, develops and integrates web, mobile, cloud and enterprise applications. We work with businesses that need a technology partner who understands both the engineering and the operational side of the systems they depend on.",
 
   contact: {
-    phone: "6394848080",
-    phoneHref: "tel:+916394848080", // E.164 for click-to-call
-    phoneDisplay: "6394848080",
-    email: "Raj.vimal@AtherIQ.com",
-    emailHref: "mailto:Raj.vimal@AtherIQ.com",
-    hours: "Monday to Saturday, 9:30 AM - 7:00 PM IST",
+    phone: "6394843808",
+    phoneHref: "tel:+91639484808", // E.164 for click-to-call
+    phoneDisplay: "6394843808",
+    email: "atheriq@outlook.com",
+    emailHref: "mailto:atheriq@outlook.com",
+    hours: "Monday to Friday, 10:30 AM - 7:00 PM IST",
     responseTime: "We respond to project enquiries within one business day.",
   },
 

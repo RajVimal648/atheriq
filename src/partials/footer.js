@@ -14,13 +14,7 @@ export const footer = () => `
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <a class="logo logo--footer" href="/" aria-label="${site.name} home">
-   <span class="logo__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="32" height="32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="currentColor"/>
-     <path d="M9 22.5 15.1 9.5h1.9L23 22.5h-3.1l-1.32-3H13.4l-1.3 3H9Zm5.42-5.4h3.2L16 13.35 14.42 17.1Z" fill="#0B1220"/>
-      </svg>
-     </span>
-          <span class="logo__text"><span class="logo__name">Ather<span class="logo__accent">IQ</span></span></span>
+          <img src="/assets/img/atheriqlogolight.png" alt="${site.name}" class="logo__img" width="auto" height="48" loading="lazy">
         </a>
         <p class="site-footer__desc">${site.longDescription}</p>
         <ul class="site-footer__contact">

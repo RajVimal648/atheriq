@@ -29,7 +29,7 @@ const organization = () => ({
   logo: {
     "@type": "ImageObject",
     "@id": `${site.url}/#logo`,
-    url: `${site.url}/assets/img/atheriq-logo.svg`,
+    url: `${site.url}/assets/img/atheriqlogo.png`,
     width: 512,
     height: 512,
   },
@@ -105,8 +105,8 @@ ${page.noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name=
 
 <meta name="theme-color" content="#0B1220">
 <meta name="format-detection" content="telephone=no">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" href="/assets/img/atheronlylogo.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/atheronlylogo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
