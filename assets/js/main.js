@@ -197,7 +197,7 @@
       try {
         const API_BASE = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
           ? "http://localhost:5080"
-          : "https://atheriqapi.runasp.net";
+          : "http://atheriqapi.runasp.net";
 
         const res = await fetch(`${API_BASE}/api/Contact`, {
           method:  "POST",
