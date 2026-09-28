@@ -153,31 +153,109 @@
       });
     });
 
-    on(form, "submit", (e) => {
+    on(form, "submit", async (e) => {
       e.preventDefault();
+
+      // Clear previous API error
+      const prevErr = form.querySelector(".form__api-error");
+      if (prevErr) prevErr.remove();
 
       const invalid = controls.filter((input) => !validateField(input));
       if (invalid.length) {
+        // Shake every invalid field, focus the first
+        invalid.forEach((input) => {
+          const fieldEl = input.closest(".field, .checkbox");
+          if (fieldEl) {
+            fieldEl.classList.remove("field--shake");
+            void fieldEl.offsetWidth; // reflow to restart animation
+            fieldEl.classList.add("field--shake");
+            fieldEl.addEventListener("animationend", () => fieldEl.classList.remove("field--shake"), { once: true });
+          }
+        });
         invalid[0].focus();
         return;
       }
 
-      /*
-       * No credentials or endpoints live in front-end code. To connect this to
-       * a backend, POST `new FormData(form)` to your own API route (which then
-       * talks to email/CRM using server-side secrets) and show the status
-       * panel on a successful response.
-       */
-      const status = document.getElementById(form.dataset.status);
-      if (status) {
-        status.classList.add("is-visible");
-        form.hidden = true;
-        status.setAttribute("tabindex", "-1");
-        status.focus();
-        status.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "center" });
+      /* ── Build payload matching the API contract ── */
+      const fd   = new FormData(form);
+      const body = {
+        fullName:     (fd.get("name")    || "").trim(),
+        email:        (fd.get("email")   || "").trim(),
+        phone:        (fd.get("phone")   || "").trim(),
+        company:      (fd.get("company") || "").trim(),
+        service:      (fd.get("service") || "").trim(),
+        message:      (fd.get("message") || "").trim(),
+        consentGiven: !!fd.get("consent"),
+        website:      (fd.get("website") || "").trim(),
+      };
+
+      /* ── Loading state ── */
+      const btn = form.querySelector("[type=submit]");
+      const originalText = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+
+      try {
+        const res = await fetch("http://localhost:5080/api/Contact", {
+          method:  "POST",
+          headers: { "Content-Type": "application/json", "accept": "*/*" },
+          body:    JSON.stringify(body),
+        });
+
+        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+
+        /* ── Success: show overlay modal & remove form ── */
+        showSuccessModal(form);
+
+      } catch (err) {
+        console.error("Contact form error:", err);
+        if (btn) { btn.disabled = false; btn.textContent = originalText; }
+
+        const errEl = document.createElement("p");
+        errEl.className = "form__api-error";
+        errEl.setAttribute("role", "alert");
+        errEl.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Something went wrong. Please try again or email us directly.`;
+        form.appendChild(errEl);
       }
     });
   });
+
+  /* ── Success overlay modal ───────────────────────────────────── */
+  function showSuccessModal(form) {
+    form.hidden = true;
+
+    const overlay = document.createElement("div");
+    overlay.className = "success-overlay";
+    overlay.setAttribute("role", "dialog");
+    overlay.setAttribute("aria-modal", "true");
+    overlay.setAttribute("aria-label", "Enquiry submitted successfully");
+
+    overlay.innerHTML = `
+      <div class="success-card">
+        <div class="success-card__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <h2 class="success-card__title">Enquiry Received!</h2>
+        <p class="success-card__text">Thank you for reaching out. We&rsquo;ve received your message and will get back to you within one business day.</p>
+        <button class="success-card__close" type="button">Done</button>
+      </div>`;
+
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+
+    const closeModal = () => {
+      overlay.remove();
+      document.body.style.overflow = "";
+    };
+
+    overlay.querySelector(".success-card__close").addEventListener("click", closeModal);
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+    const onKey = (e) => { if (e.key === "Escape") { closeModal(); document.removeEventListener("keydown", onKey); } };
+    document.addEventListener("keydown", onKey);
+    overlay.querySelector(".success-card__close").focus();
+  }
 
   /* ----------------------------------------------- 6. blog filter + search */
 

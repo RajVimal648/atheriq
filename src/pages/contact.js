@@ -89,8 +89,8 @@ ${pageHero({
         submit: "Send enquiry",
         note: site.contact.responseTime,
         status: {
-          title: "Thank you — your enquiry has been noted.",
-          text: "This site is not yet connected to a mail server, so please send your message directly to us using the details on this page and we will respond within one business day.",
+          title: "Thank you — your enquiry has been received.",
+          text: "We have received your message and will get back to you within one business day.",
           meta: `Email ${site.contact.email} · Phone ${site.contact.phoneDisplay}`,
         },
       })}
