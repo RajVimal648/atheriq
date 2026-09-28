@@ -1149,6 +1149,9 @@ body.nav-open { overflow: hidden; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .stack-viz__dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); }
+.stack-viz__dot--red    { background: #ff5f57; }
+.stack-viz__dot--yellow { background: #febc2e; }
+.stack-viz__dot--green  { background: #28c840; }
 .stack-viz__label {
   margin-left: 0.55rem;
   font-size: var(--fs-xs);
