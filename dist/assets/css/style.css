@@ -1170,6 +1170,7 @@ body.nav-open { overflow: hidden; }
   text-align: center;
 }
 .stack-viz__node .icon { margin: 0 auto 0.4rem; color: #6fa2ff; }
+.stack-viz__node .brand-icon { display: block; object-fit: contain; image-rendering: -webkit-optimize-contrast; }
 .stack-viz__node b { display: block; font-size: var(--fs-xs); font-weight: 500; color: #dbe3ef; }
 .stack-viz__node--core {
   background: rgba(21, 84, 192, 0.2);

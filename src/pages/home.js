@@ -55,8 +55,8 @@ const heroVisual = () => `
   <span class="stack-viz__link" aria-hidden="true"></span>
 
   <div class="stack-viz__row stack-viz__row--2">
-    <div class="stack-viz__node">${icon("azure", { size: 20 })}<b>Azure</b></div>
-    <div class="stack-viz__node">${icon("aws", { size: 20 })}<b>AWS</b></div>
+    <div class="stack-viz__node"><img src="https://cdn.iconscout.com/icon/free/png-512/free-azure-logo-icon-svg-download-png-1583129.png?f=webp&w=256" width="20" height="20" alt="Azure" class="icon brand-icon" loading="lazy"><b>Azure</b></div>
+    <div class="stack-viz__node"><img src="https://cdn.iconscout.com/icon/free/png-256/free-amazon-aws-icon-svg-download-png-2944772.png?f=webp" width="20" height="20" alt="AWS" class="icon brand-icon" loading="lazy"><b>AWS</b></div>
   </div>
   <span class="stack-viz__link" aria-hidden="true"></span>
 
