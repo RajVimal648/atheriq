@@ -74,9 +74,9 @@ const hero = () => `
   <div class="container hero__inner">
     <div>
       <p class="eyebrow">${site.tagline}</p>
-      <h1 class="hero__title">Build Better Digital Experiences with AtherIQ</h1>
-      <p class="lead hero__lead">We design, develop and integrate modern digital solutions that help
-        businesses improve operations, reach customers and scale with confidence.</p>
+      <h1 class="hero__title">Top Custom Software & Web Development Agency in India</h1>
+      <p class="lead hero__lead">We design, develop, and integrate custom digital solutions that help
+        global businesses improve operations, reach customers, and scale with offshore excellence.</p>
       ${btnRow([cta.consultation, { ...cta.services, variant: "ghost", icon: "arrow" }])}
       <ul class="hero__points">
         <li>${icon("check", { size: 17 })}Web, mobile &amp; custom software</li>
@@ -284,10 +284,10 @@ const faqSection = () => `
 
 export const home = {
   route: "/",
-  title: "AtherIQ | Web, Mobile, Cloud & CRM/ERP Integration Company",
-  ogTitle: "AtherIQ | Technology. Innovation. Growth.",
+  title: "AtherIQ | Custom Software & Web Development Agency in India",
+  ogTitle: "AtherIQ | Top Custom Software Development Agency in India",
   description:
-    "AtherIQ builds websites, web and mobile applications, custom software and cloud solutions on Azure and AWS, with CRM, ERP, API integration and SEO services.",
+    "AtherIQ is a top custom software development and IT agency in India. We build scalable websites, mobile apps, and cloud solutions with deep CRM & API integration.",
   schema: [
     itemListSchema(
       services.map((s) => ({ name: s.name, href: `/services/${s.slug}` })),

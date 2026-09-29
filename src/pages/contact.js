@@ -55,6 +55,10 @@ const fields = [
     hint: "What you are trying to build, improve or connect — and anything already in place.",
     placeholder: "A few sentences is enough to start.",
   }),
+  `<div class="field field--full" style="display:none" aria-hidden="true">
+     <label for="website-honeypot">Website (leave blank)</label>
+     <input type="text" name="website" id="website-honeypot" tabindex="-1" autocomplete="off" />
+   </div>`,
   `<div class="field field--full">${consentField()}</div>`,
 ].join("");
 

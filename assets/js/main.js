@@ -145,9 +145,8 @@
   document.querySelectorAll("form[data-validate]").forEach((form) => {
     const controls = [...form.elements].filter((el) => el.name && el.type !== "submit");
 
-    // Validate on blur once touched, and clear the error as soon as it is fixed.
+    // Clear the error as soon as it is fixed (only validate on input if already invalid).
     controls.forEach((input) => {
-      on(input, "blur", () => validateField(input));
       on(input, "input", () => {
         if (input.type === "tel") {
           input.value = input.value.replace(/[^\d]/g, ""); // Force numbers only

@@ -7,14 +7,14 @@ export const site = {
   url: "https://www.atheriq.com", // update when the production domain is live
   locale: "en_IN",
   lang: "en",
-  buildDate: "2026-09-10",
+  buildDate: new Date().toISOString().split("T")[0],
   foundingYear: 2026,
 
   shortDescription:
-    "AtherIQ is a technology and software services company that helps businesses build, integrate and scale their digital systems.",
+    "AtherIQ is a top-rated custom software development and IT consulting company in India, helping businesses globally build, integrate, and scale digital systems.",
 
   longDescription:
-    "AtherIQ designs, develops and integrates web, mobile, cloud and enterprise applications. We work with businesses that need a technology partner who understands both the engineering and the operational side of the systems they depend on.",
+    "AtherIQ designs, develops, and integrates web, mobile, cloud, and enterprise applications. As a trusted technology partner in India, we work with global businesses that need offshore engineering excellence and a deep understanding of the operational systems they depend on.",
 
   contact: {
     phone: "6394843808",
@@ -28,7 +28,7 @@ export const site = {
 
   // Add profile URLs when the accounts are live. Empty entries are not rendered.
   social: [
-    { label: "LinkedIn", url: "" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/company/atheriq/" },
     { label: "GitHub", url: "" },
     { label: "X", url: "" },
   ],
