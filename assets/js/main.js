@@ -133,8 +133,8 @@
           : `${input.dataset.label || "This field"} is required.`;
     } else if (value && input.type === "email" && !EMAIL.test(input.value.trim())) {
       error = "Enter a valid email address, for example name@company.com";
-    } else if (value && input.type === "tel" && input.value.replace(/[^\d]/g, "").length < 7) {
-      error = "Enter a phone number we can reach you on.";
+    } else if (value && input.type === "tel" && (!/^\d+$/.test(value) || value.length < 7)) {
+      error = "Enter a valid phone number (numbers only).";
     }
 
     input.setAttribute("aria-invalid", error ? "true" : "false");
@@ -149,6 +149,9 @@
     controls.forEach((input) => {
       on(input, "blur", () => validateField(input));
       on(input, "input", () => {
+        if (input.type === "tel") {
+          input.value = input.value.replace(/[^\d]/g, ""); // Force numbers only
+        }
         if (input.getAttribute("aria-invalid") === "true") validateField(input);
       });
     });
@@ -191,13 +194,16 @@
 
       /* ── Loading state ── */
       const btn = form.querySelector("[type=submit]");
-      const originalText = btn ? btn.textContent : "";
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      if (btn) { 
+        if (!btn.dataset.originalText) btn.dataset.originalText = btn.textContent;
+        btn.disabled = true; 
+        btn.textContent = "Sending…"; 
+      }
 
       try {
         const API_BASE = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
           ? "http://localhost:5080"
-          : "https://atheriqapi.runasp.net";
+          : "http://atheriqapi.runasp.net";
 
         const res = await fetch(`${API_BASE}/api/Contact`, {
           method:  "POST",
@@ -212,7 +218,7 @@
 
       } catch (err) {
         console.error("Contact form error:", err);
-        if (btn) { btn.disabled = false; btn.textContent = originalText; }
+        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.originalText; }
 
         const errEl = document.createElement("p");
         errEl.className = "form__api-error";
@@ -252,6 +258,15 @@
     const closeModal = () => {
       overlay.remove();
       document.body.style.overflow = "";
+      
+      // Reset form on success close
+      form.reset();
+      form.hidden = false;
+      const btn = form.querySelector("[type=submit]");
+      if (btn) {
+        btn.disabled = false;
+        btn.textContent = btn.dataset.originalText || "Send enquiry";
+      }
     };
 
     overlay.querySelector(".success-card__close").addEventListener("click", closeModal);

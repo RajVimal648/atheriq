@@ -37,7 +37,7 @@ const fields = [
     autocomplete: "email",
     placeholder: "name@company.com",
   }),
-  field({ name: "phone", label: "Phone", type: "tel", autocomplete: "tel", placeholder: "Optional" }),
+  field({ name: "phone", label: "Phone", type: "tel", required: true, autocomplete: "tel", placeholder: "Your phone number", pattern: "[0-9]*" }),
   field({ name: "company", label: "Company", autocomplete: "organization", placeholder: "Company name" }),
   field({
     name: "service",
